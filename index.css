@@ -1,5 +1,6 @@
 * {
   font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
 }
 
 body,
@@ -40,7 +41,7 @@ nav {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: "Chelsea Market", cursive;
 }
 
@@ -64,7 +65,6 @@ header p {
 }
 
 header p {
-  font-size: 1rem;
   margin: 0.75rem;
 }
 
@@ -114,4 +114,37 @@ section img {
 header img {
   width: 250px;
   border-radius: 100%;
+}
+
+/* CSS Animations */
+@keyframes grow {
+  0% {
+    padding: 1.25rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  100% {
+    font-size: 1.1rem;
+    border-radius: 50px;
+  }
+}
+
+@keyframes fadeInBorder {
+  0% {
+    border: 10px solid rgba(250, 128, 114, 0);
+  }
+
+  100% {
+    opacity: 1;
+    border: 10px solid rgba(250, 128, 114, 1);
+  }
+}
+
+main:hover {
+  animation: grow 0.25s linear alternate;
+  animation-fill-mode: forwards;
+}
+
+#park-guide:hover {
+  animation: fadeInBorder 1s linear forwards;
 }
