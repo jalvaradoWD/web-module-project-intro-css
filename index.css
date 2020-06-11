@@ -148,3 +148,17 @@ main:hover {
 #park-guide:hover {
   animation: fadeInBorder 1s linear forwards;
 }
+
+@keyframes increaseSize {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+nav a:hover {
+  animation: increaseSize 0.25s linear forwards;
+}
