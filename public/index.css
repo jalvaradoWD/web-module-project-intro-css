@@ -1,0 +1,164 @@
+* {
+  font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
+}
+
+body,
+p,
+h1,
+nav {
+  margin: 0;
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem 0;
+}
+
+.plan,
+.learn,
+.involve {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 1.2rem;
+  border-radius: 20px;
+}
+
+.plan {
+  background-color: #ff764e;
+}
+
+.learn {
+  background-color: #5ed3eb;
+}
+
+.involve {
+  background-color: #ffcd69;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-family: "Chelsea Market", cursive;
+}
+
+header,
+main {
+  margin: 0 5%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-bottom: 2rem;
+}
+
+header h1,
+header p {
+  line-height: 1.25;
+}
+
+header p {
+  margin: 0.75rem;
+}
+
+header p:last-child {
+  width: 20rem;
+  margin: 0 auto;
+  line-height: 1.25;
+}
+
+main {
+  background-color: #ddb9a3;
+  color: white;
+  text-align: center;
+  padding: 1.25rem 1.75rem;
+}
+
+section {
+  width: 400px;
+  margin: 2.5rem auto;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+footer {
+  margin-top: 5rem;
+  background-color: #f9e7dc;
+}
+
+footer img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+section img {
+  width: 150px;
+  margin: 0 auto;
+}
+
+#park-guide * {
+  text-align: center;
+}
+
+header img {
+  width: 250px;
+  border-radius: 100%;
+}
+
+/* CSS Animations */
+@keyframes grow {
+  0% {
+    padding: 1.25rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  100% {
+    font-size: 1.1rem;
+    border-radius: 50px;
+  }
+}
+
+@keyframes fadeInBorder {
+  0% {
+    border: 10px solid rgba(250, 128, 114, 0);
+  }
+
+  100% {
+    opacity: 1;
+    border: 10px solid rgba(250, 128, 114, 1);
+  }
+}
+
+main:hover {
+  animation: grow 0.25s linear alternate;
+  animation-fill-mode: forwards;
+}
+
+#park-guide:hover {
+  animation: fadeInBorder 1s linear forwards;
+}
+
+@keyframes increaseSize {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+nav a:hover {
+  animation: increaseSize 0.25s linear forwards;
+}
